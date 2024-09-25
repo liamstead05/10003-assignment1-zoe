@@ -104,7 +104,63 @@ internal class Program
                                 Console.WriteLine("\"I'm doing this to get Dad back.\"");
                                 Console.WriteLine("\"Your father is not coming back. He's long gone and you know it.\"");
                                 Console.WriteLine("\"No he's not!\" You yell so loud to a point where the mirror shatters. The creature turns to the mirror before looking back at you.");
-                                Console.WriteLine("Without saying a word, the creature walks back into the mirror, before turning to face Lexi, now with cuts on its body in the shape of the mirror cracks, and vanishing.");
+                                Console.WriteLine("Without saying a word, the creature walks back into the mirror before turning to face you, now with cuts on its body in the shape of the mirror cracks, then vanishing into thin air.");
+                                Console.WriteLine("You head to the next room, which has a chest. However, you can leave if you please.");
+                                Console.WriteLine("Do you check the chest or leave?");
+
+                                // Get a response from the player
+                                playerInput = Console.ReadLine();
+
+                                // Compare the events of checking the chest and leaving
+                                if (playerInput == "Chest")
+                                {
+                                    Console.WriteLine("You remembered that you found a key in the couch earlier.");
+                                    Console.WriteLine("Using the key, you unlock the chest, and to your surprise, the contents that you found are very useful.");
+                                    Console.WriteLine("You find at least 100 gold, a medic bag, and a diamond.");
+                                    Console.WriteLine("You take everything from the chest and put it into your bag, except for the medic bag, which you use to heal yourself.");
+                                    Console.WriteLine("After fifteen minutes of healing your wounds, you decide it's time to leave the house.");
+                                    Console.WriteLine("You walk out of the house and back onto the path in the forest.");
+                                    Console.WriteLine("As you continue, you can't help but fail to ignore all of the dead trees and nature around the area.");
+                                    Console.WriteLine("\"It feels like someone came in and sucked all of the life away from the forest.\" You whisper under your breath.");
+                                    Console.WriteLine("Suddenly, you hear rattling in one of the bushes, and out comes a skeleton.");
+                                    Console.WriteLine("Do you attack the skeleton or use an item?");
+
+                                    // Get a response from the player
+                                    playerInput = Console.ReadLine();
+
+                                    // Compare the events of fighting the slime monster
+                                    if (playerInput == "Attack")
+                                    {
+                                        // Continue the game
+                                        Console.WriteLine("You choose to attack the creature.");
+                                        Console.WriteLine("Using the force that you've got and the stick that you found, you take a massive swing at the slime creature, hitting it in the process.");
+                                        Console.WriteLine("Somehow, it was enough to scare it away for good. You won the battle");
+                                        Console.WriteLine("You continue on your journey, and you come across a large river.");
+                                        Console.WriteLine("\"How can I get across this river?\" You ask yourself.");
+                                        Console.WriteLine("You spot a log nearby, but you remember that you could try and jump over the river on your own.");
+                                        Console.WriteLine("Do you jump over the river or use the log to cross the river?");
+
+                                        // Get a response from the player
+                                        playerInput = Console.ReadLine();
+
+                                        // Compare the events of crossing the river
+                                        if (playerInput == "Jump")
+                                        {
+                                            // End the game and give the player the fifth ending
+                                            Console.WriteLine("You use all of the energy you have within you to jump over the river.");
+                                            Console.WriteLine("Unfortunately, you don't make it and proceed to fall into the river.");
+                                            Console.WriteLine("Your body submerges into the body of water and you try to swim up to the top, but the currents keep pushing you back.");
+                                            Console.WriteLine("The river becomes too much for you that you end up drowning, bringing your journey to an abrupt end.");
+                                            Console.WriteLine("Thanks For Playing!");
+                                            Console.WriteLine("Ending 5/8 - \"Leap of Fate\" Unlocked!");
+                                            Console.WriteLine("Play again to gain all endings!");
+                                        }
+                                        else if (playerInput == "Log")
+                                        {
+                                            // Continue the game
+                                            Console.WriteLine("You head over to the log that's nearby and begin to roll the log over to the river.");
+                                        }
+                                    }
                             }
                             else if (playerInput == "Mirror")
                             {
@@ -119,7 +175,42 @@ internal class Program
                                 Console.WriteLine("\"I'm doing this to get Dad back.\"");
                                 Console.WriteLine("\"Your father is not coming back. He's long gone and you know it.\"");
                                 Console.WriteLine("\"No he's not!\" You yell so loud to a point where the mirror shatters. The creature turns to the mirror before looking back at you.");
-                                Console.WriteLine("Without saying a word, the creature walks back into the mirror, before turning to face Lexi, now with cuts on its body in the shape of the mirror cracks, and vanishing.");
+                                Console.WriteLine("Without saying a word, the creature walks back into the mirror before turning to face you, now with cuts on its body in the shape of the mirror cracks, then vanishing into thin air.");
+                                Console.WriteLine("You head to the next room, which has a chest. However, you can leave if you please.");
+                                Console.WriteLine("Do you check the chest or leave?");
+
+                                // Get a response from the player
+                                playerInput = Console.ReadLine();
+
+                                // Compare the events of checking the chest and leaving
+                                if (playerInput == "Chest")
+                                {
+                                    // End the game and give the player the fourth ending
+                                    Console.WriteLine("You try to open the chest, but it's locked.");
+                                    Console.WriteLine("Thinking about moving on, you decide to leave the house continue onwards, thinking that it was the best option.");
+                                    Console.WriteLine("As you continue, you start to feel dizzy, with your vision getting blurry.");
+                                    Console.WriteLine("Suddenly, you drop to the floor in exhaustion, thinking that you have been tired.");
+                                    Console.WriteLine("You close your eyes and lay on the ground. You don't realize it, but you have passed away from your wounds. Your journey ends here.");
+                                    Console.WriteLine("Thanks For Playing!");
+                                    Console.WriteLine("Ending 4/8 - \"Shattered Wounds\" Unlocked!");
+                                    Console.WriteLine("Play again to gain all endings!");
+                                }
+                                else if (playerInput == "Leave")
+                                {
+                                    // End the game and give the player the fourth ending
+                                    Console.WriteLine("Thinking about moving on, you decide to leave the house continue onwards, thinking that it was the best option.");
+                                    Console.WriteLine("As you continue, you start to feel dizzy, with your vision getting blurry.");
+                                    Console.WriteLine("Suddenly, you drop to the floor in exhaustion, thinking that you have been tired.");
+                                    Console.WriteLine("You close your eyes and lay on the ground. You don't realize it, but you have passed away from your wounds. Your journey ends here.");
+                                    Console.WriteLine("Thanks For Playing!");
+                                    Console.WriteLine("Ending 4/8 - \"Shattered Wounds\" Unlocked!");
+                                    Console.WriteLine("Play again to gain all endings!");
+                                }
+                                else
+                                {
+                                    // Let the player know that what they typed is invalid
+                                    Console.WriteLine($"Your response \"{playerInput}\" is not valid.");
+                                }
                             }
                             else
                             {
