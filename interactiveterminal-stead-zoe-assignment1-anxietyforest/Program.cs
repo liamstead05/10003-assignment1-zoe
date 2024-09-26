@@ -116,7 +116,7 @@ internal class Program
                                 {
                                     Console.WriteLine("You remembered that you found a key in the couch earlier.");
                                     Console.WriteLine("Using the key, you unlock the chest, and to your surprise, the contents that you found are very useful.");
-                                    Console.WriteLine("You find at least 100 gold, a medic bag, and a diamond.");
+                                    Console.WriteLine("You find at least 100 gold and a medic bag.");
                                     Console.WriteLine("You take everything from the chest and put it into your bag, except for the medic bag, which you use to heal yourself.");
                                     Console.WriteLine("After fifteen minutes of healing your wounds, you decide it's time to leave the house.");
                                     Console.WriteLine("You walk out of the house and back onto the path in the forest.");
@@ -159,6 +159,64 @@ internal class Program
                                         {
                                             // Continue the game
                                             Console.WriteLine("You head over to the log that's nearby and begin to roll the log over to the river.");
+                                            Console.WriteLine("Eventually, you successfully roll it over the river, creating a makeshift bridge.");
+                                            Console.WriteLine("You carefully walk over the log from one side of the river to the other.");
+                                            Console.WriteLine("After crossing the river, you make your way into the forest.");
+                                            Console.WriteLine("You spot a figure in the distance. It's hard to tell who that figure may be, but you know it's someone.");
+                                            Console.WriteLine("You approach them, and you learn that they are a hiker.");
+                                            Console.WriteLine("\"Howdy there, traveller!\" The hiker greets you. \"Are you journeying to the other side of the forest?\"");
+                                            Console.WriteLine("\"Yes, I am.\" You reply to them. \"Do you know where to go?\"");
+                                            Console.WriteLine("\"Yes, I do, you'll have to take the path on the right, as the one on the left is not what you'll want to go down. It contains a lot of dangerous traps.\"");
+                                            Console.WriteLine("\"Oh, alright. Thank you for letting me know.\"");
+                                            Console.WriteLine("As you begin to walk forward, the hiker taps you on the shoulder. You turn to face them.");
+                                            Console.WriteLine("\"By the way, would you like to buy an item from my shop? I've got a couple of things that vary in price.\"");
+                                            Console.WriteLine("You nod your head. The hiker lays down a couple of items.");
+                                            Console.WriteLine("There is a potion that costs 50 gold, a sword that costs 75 gold, and a diamond that costs 100 gold. What do you buy?");
+
+                                            // Get a response from the player
+                                            playerInput = Console.ReadLine();
+
+                                            // Compare the events of purchasing an item
+                                            if (playerInput == "Potion")
+                                            {
+                                                // Continue the game - Ending 6, 7
+                                                Console.WriteLine("You purchase the potion.");
+                                                Console.WriteLine("\"Do you know what this potion do?\" You ask the hiker.");
+                                                Console.WriteLine("\"I don't know to be honest. The person who gave it to me didn't say anything.\" The hiker responds. \"Anyways, take care!\"");
+                                                Console.WriteLine("The hiker disappears into thin air. You can't help but feel like you've been scammed.");
+                                                Console.WriteLine("You continue on your journey, taking the right path. Suddenly, you stumble upon a portal. Do you enter it or continue onward?");
+
+                                                // Get a response from the player
+                                                playerInput = Console.ReadLine();
+
+                                                // Compare the events of entering the portal
+                                                if (playerInput == "Enter")
+                                                {
+                                                    // Continue the game - Ending 7
+                                                    Console.WriteLine("You enter the portal, and you end up in a warped environment.");
+                                                    Console.WriteLine("\"What the hell is this?\" You ask yourself with confusion.");
+                                                    Console.WriteLine("\"Welcome back, Lexi.\" The creature appears in front of you. \"I see that you found my trap.\"");
+                                                    Console.WriteLine("\"What do you want from me?\" You bark at the creature.");
+                                                    Console.WriteLine("\"I want you to parish, so then I can be set free. Prepare to die!\"");
+                                                    Console.WriteLine("A fight ensues. Do you attack or use the potion?");
+
+                                                    // Get a response from the player
+                                                    playerInput = Console.ReadLine();
+
+                                                    // Compare the events of attacking and using the potion
+                                                    if (playerInput == "Attack")
+                                                    {
+                                                        // End the game and give the player the seventh ending
+                                                        Console.WriteLine("You try to attack, but you don't have anything on you.");
+                                                        Console.WriteLine("\"Pathetic!\" The creature mocks. Suddenly, your body begins to grow glowing cracks.");
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        else
+                                        {
+                                            // Let the player know that what they typed is invalid
+                                            Console.WriteLine($"Your response \"{playerInput}\" is not valid.");
                                         }
                                     }
                             }
