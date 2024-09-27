@@ -309,22 +309,11 @@ internal class Program
                                     Console.WriteLine($"Your response \"{playerInput}\" is not valid.");
                                 }
                             }
-                            else if (playerInput == "Continue")
-                            {
-                                // End the game
-                                Console.WriteLine("You ignore the house and continue onwards, before you die of your wounds.\n");
-                            }
-                            else
-                            {
-                                // Let the player know that what they typed is invalid
-                                Console.WriteLine($"Your response \"{playerInput}\" is not valid.");
-                            }
-
                         }
-                        else if (playerInput == "Right")
+                        else if (playerInput == "Continue")
                         {
                             // End the game
-                            Console.WriteLine("You decide to go right, but you die from your wounds.\n");
+                            Console.WriteLine("You ignore the house and continue onwards, before you die of your wounds.\n");
                         }
                         else
                         {
@@ -332,11 +321,10 @@ internal class Program
                             Console.WriteLine($"Your response \"{playerInput}\" is not valid.");
                         }
                     }
-                    else if (playerInput == "Item")
+                    else if (playerInput == "Right")
                     {
                         // End the game
-                        Console.WriteLine("You don't have any items.\n");
-                        Console.WriteLine("You die to the slime.\n");
+                        Console.WriteLine("You decide to go right, but you die from your wounds.\n");
                     }
                     else
                     {
@@ -344,13 +332,11 @@ internal class Program
                         Console.WriteLine($"Your response \"{playerInput}\" is not valid.");
                     }
                 }
-                else if (playerInput == "Listen")
+                else if (playerInput == "Item")
                 {
-                    // End the game and give the player the first ending
-                    Console.WriteLine("You nod to the woman and head back from where you came from, escaping the fate that you were about to succumb to.\n");
-                    Console.WriteLine("Thanks For Playing!\n");
-                    Console.WriteLine("Ending 1/3 - \"With Hesitation\" Unlocked!\n");
-                    Console.WriteLine("Play again to gain all endings!\n");
+                    // End the game
+                    Console.WriteLine("You don't have any items.\n");
+                    Console.WriteLine("You die to the slime.\n");
                 }
                 else
                 {
@@ -358,16 +344,29 @@ internal class Program
                     Console.WriteLine($"Your response \"{playerInput}\" is not valid.");
                 }
             }
-            else if (playerInput == "Quit")
+            else if (playerInput == "Listen")
             {
-                // End the program
-                Console.WriteLine("Have a nice day!");
+                // End the game and give the player the first ending
+                Console.WriteLine("You nod to the woman and head back from where you came from, escaping the fate that you were about to succumb to.\n");
+                Console.WriteLine("Thanks For Playing!\n");
+                Console.WriteLine("Ending 1/3 - \"With Hesitation\" Unlocked!\n");
+                Console.WriteLine("Play again to gain all endings!\n");
             }
             else
             {
                 // Let the player know that what they typed is invalid
                 Console.WriteLine($"Your response \"{playerInput}\" is not valid.");
             }
+        }
+        else if (playerInput == "Quit")
+        {
+            // End the program
+            Console.WriteLine("Have a nice day!");
+        }
+        else
+        {
+            // Let the player know that what they typed is invalid
+            Console.WriteLine($"Your response \"{playerInput}\" is not valid.");
         }
     }
 }
